@@ -9,6 +9,7 @@ public class BinarySearchTest {
         assertEquals(-1 , BinarySearch.binarySearch(20));
         assertEquals(6,BinarySearch.binarySearch(7));
         assertEquals(0,BinarySearch.binarySearch(1));
+        assertEquals(1,BinarySearch.binarySearch(2));
     }
 
 
