@@ -24,7 +24,7 @@ public class BinarySearch {
 
         }
         if(count == 0){
-            System.out.println(userInput+" is not available is the list");
+            System.out.println(userInput+" is not available in the list");
         }
     }
 }
