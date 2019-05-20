@@ -1,5 +1,4 @@
 package logic;
-
 import java.util.Arrays;
 import java.util.List;
 
@@ -19,10 +18,9 @@ public class BinarySearch {
             int middleIndex = (firstIndex+lastIndex)/2;
             if(listOfNumbers.get(middleIndex) == number){
                 return middleIndex;
-
             }
             else if(listOfNumbers.get(middleIndex) >number){
-                lastIndex = middleIndex-1;
+                lastIndex = middleIndex;
             }
             else{
                 firstIndex = middleIndex + 1;
