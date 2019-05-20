@@ -13,6 +13,12 @@ public class BinarySearch {
                 System.out.println(listOfNumbers.get(middleIndex) + "is in" + middleIndex+"index");
                 break;
             }
+            else if (listOfNumbers.get(middleIndex) > userInput) {
+                lastIndex = middleIndex - 1;
+            }
+            else {
+                firstIndex = middleIndex + 1;
+            }
 
         }
     }
