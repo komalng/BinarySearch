@@ -4,7 +4,12 @@ import java.util.List;
 public class BinarySearch {
     public static void main(String[] args) {
         int userInput = Integer.parseInt(args[0]);
-        System.out.println(binarySearch(userInput));
+        if(binarySearch(userInput) == -1){
+            System.out.println(userInput+" is not present in listOfNumbers");
+        }
+        else{
+            System.out.println(userInput+" is present in "+binarySearch(userInput)+" index in listOfNumbers");
+        }
     }
 
     public static int binarySearch(int number){
