@@ -23,7 +23,7 @@ public class BinarySearch {
                 lastIndex = middleIndex;
             }
             else{
-                firstIndex = middleIndex + 1;
+                firstIndex = middleIndex;
             }
         }
         return -1;
