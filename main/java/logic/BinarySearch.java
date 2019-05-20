@@ -15,7 +15,7 @@ public class BinarySearch {
         int lastIndex = listOfNumbers.size();
         int firstIndex = 0;
         while(firstIndex<lastIndex || lastIndex == 0){
-            int middleIndex = (firstIndex+lastIndex)/2;
+            int middleIndex = getMiddleIndex(lastIndex, firstIndex);
             if(listOfNumbers.get(middleIndex) == number){
                 return middleIndex;
             }
@@ -27,5 +27,9 @@ public class BinarySearch {
             }
         }
         return -1;
+    }
+
+    private static int getMiddleIndex(int lastIndex, int firstIndex) {
+        return (firstIndex+lastIndex)/2;
     }
 }
