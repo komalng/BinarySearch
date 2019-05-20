@@ -7,10 +7,12 @@ public class BinarySearch {
         List<Integer> listOfNumbers = Arrays.asList(1, 22, 35, 46, 57, 67, 89, 99, 100, 110, 120);
         int lastIndex = listOfNumbers.size();
         int firstIndex = 0;
+        int count = 0;
         while (firstIndex < lastIndex || lastIndex == 0) {
             int middleIndex = (firstIndex + lastIndex) / 2;
             if (listOfNumbers.get(middleIndex) == userInput) {
-                System.out.println(listOfNumbers.get(middleIndex) + "is in" + middleIndex+"index");
+                System.out.println(listOfNumbers.get(middleIndex) + " is in " + middleIndex+" index");
+                count = count + 1;
                 break;
             }
             else if (listOfNumbers.get(middleIndex) > userInput) {
@@ -20,6 +22,9 @@ public class BinarySearch {
                 firstIndex = middleIndex + 1;
             }
 
+        }
+        if(count == 0){
+            System.out.println(userInput+" is not available is the list");
         }
     }
 }
