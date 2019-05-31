@@ -8,15 +8,15 @@ public class BinarySearch {
         System.out.println(binarySearch(userInput,Arrays.asList(1,2,3,4,56)));
     }
 
-    public static int binarySearch(int number,List<Integer> numbers){
+    public static int binarySearch(int beSearch,List<Integer> numbers){
         int lastIndex = numbers.size();
         int firstIndex = 0;
         while(firstIndex<lastIndex || lastIndex == 0){
             int middleIndex = getMiddleIndex(lastIndex, firstIndex);
-            if(numbers.get(middleIndex) == number){
+            if(numbers.get(middleIndex) == beSearch){
                 return middleIndex;
             }
-            else if(numbers.get(middleIndex) >number){
+            else if(numbers.get(middleIndex) >beSearch){
                 lastIndex = middleIndex;
             }
             else{
