@@ -5,21 +5,18 @@ import java.util.List;
 public class BinarySearch {
     public static void main(String[] args) {
         int userInput = Integer.parseInt(args[0]);
-        System.out.println(binarySearch(userInput));
+        System.out.println(binarySearch(userInput,Arrays.asList(1,2,3,4,56)));
     }
 
-    public static int binarySearch(int number){
-
-        List<Integer> listOfNumbers = Arrays.asList(1,2,3,4,5,6,7);
-
-        int lastIndex = listOfNumbers.size();
+    public static int binarySearch(int number,List<Integer> numbers){
+        int lastIndex = numbers.size();
         int firstIndex = 0;
         while(firstIndex<lastIndex || lastIndex == 0){
             int middleIndex = getMiddleIndex(lastIndex, firstIndex);
-            if(listOfNumbers.get(middleIndex) == number){
+            if(numbers.get(middleIndex) == number){
                 return middleIndex;
             }
-            else if(listOfNumbers.get(middleIndex) >number){
+            else if(numbers.get(middleIndex) >number){
                 lastIndex = middleIndex;
             }
             else{
