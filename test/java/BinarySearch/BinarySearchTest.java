@@ -10,9 +10,10 @@ public class BinarySearchTest {
 
     @Test public void isUserInputAvailableInTheListOrNot(){
         assertEquals(-1 , BinarySearch.binarySearch(20, Arrays.asList(1,2,3,4,5)));
-        assertEquals(6,BinarySearch.binarySearch(7,Arrays.asList(5,7,1,0,10,3)));
-        assertEquals(0,BinarySearch.binarySearch(1,Arrays.asList(12,18,19,10)));
-        assertEquals(1,BinarySearch.binarySearch(2,Arrays.asList(2,19,10,1)));
+        assertEquals(-1,BinarySearch.binarySearch(7,Arrays.asList(10,26,90,100)));
+        assertEquals(0,BinarySearch.binarySearch(10,Arrays.asList(10,19,21,35,78)));
+        assertEquals(3,BinarySearch.binarySearch(45,Arrays.asList(10,19,21,45,78)));
+        assertEquals(1,BinarySearch.binarySearch(2,Arrays.asList(1,2,180,1000)));
     }
 
 
