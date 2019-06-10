@@ -1,32 +1,30 @@
 package logic;
-import java.util.Arrays;
 import java.util.List;
 
-public class BinarySearch {
-    public static void main(String[] args) {
-        int userInput = Integer.parseInt(args[0]);
-        System.out.println(binarySearch(userInput,Arrays.asList(1,2,3,4,56)));
-    }
 
-    public static int binarySearch(int beSearch,List<Integer> numbers){
-        int lastIndex = numbers.size()-1;
+public class BinarySearch {
+    public static <T extends Comparable<T>> int binarySearch(T element, List<T> elements) {
+        int lastIndex = elements.size()-1;
         int firstIndex = 0;
-        while(firstIndex<lastIndex || lastIndex == 0){
+        while (firstIndex < lastIndex || lastIndex == 0) {
             int middleIndex = getMiddleIndex(lastIndex, firstIndex);
-            if(numbers.get(middleIndex) == beSearch){
+            if (element.compareTo(elements.get(middleIndex))==0) {
                 return middleIndex;
-            }
-            else if(numbers.get(middleIndex) >beSearch){
+            } else if (element.compareTo(elements.get(middleIndex)) < 0) {
+                System.out.println();
                 lastIndex = middleIndex-1;
-            }
-            else{
+            }  else{
                 firstIndex = middleIndex+1;
             }
         }
         return -1;
     }
 
+
     private static int getMiddleIndex(int lastIndex, int firstIndex) {
         return (firstIndex+lastIndex)/2;
     }
 }
+
+
+
