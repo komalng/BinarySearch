@@ -19,5 +19,12 @@ public class BinarySearchTest {
         assertEquals(3,BinarySearch.binarySearch("hi",Arrays.asList("at", "from", "hello", "hi", "there", "this")));
     }
 
+    @Test public void isObjectAvailableInListORNot(){
+        Student student = new Student("komal");
+        Student student1 = new Student("omal");
+        Student student2 = new Student("pop");
+        assertEquals(2,BinarySearch.binarySearch("pop",Arrays.asList(student.student,student1.student,student2.student)));
 
+
+    }
 }
